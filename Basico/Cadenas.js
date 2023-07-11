@@ -84,23 +84,67 @@ console.log(string11.indexOf('J'));
 console.log(string11.indexOf('t'));
 console.log(string11.indexOf('z'));
 
-//! 12 lastindexOf() tomar una subcadena y si la subcadena existe en una cedena devuelve la ultima posicion de la subcadena si no existe devuelve -1
+//! 13 lastindexOf() tomar una subcadena y si la subcadena existe en una cedena devuelve la ultima posicion de la subcadena si no existe devuelve -1
 let string12 ='Evolutech te capacita, en JavaScript, y React'
 console.log(string12.lastIndexOf('J'));
 console.log(string12.lastIndexOf('t'));
 console.log(string12.lastIndexOf('z'));
-//! concat() : toma muchas subcadenas y los va a unir
+//! 14 concat() : toma muchas subcadenas y los va a unir
 let string13='evolutech' 
 let string14='javascript'
 console.log(string13.concat(' ',string14,' ','mensaje',' ','hola',' ','😀')); 
-//! startsWith
+//! 15 startsWith
 let string15 ='Evolutech te capacita, en JavaScript, y React'
 console.log(string15.startsWith('E'));
 console.log(string15.startsWith('J'));
-//! endsWith
+//! 16 endsWith
 let string16 ='Evolutech te capacita, en JavaScript, y React'
 console.log(string16.endsWith('t'));
 console.log(string16.endsWith('J'));
+//! 17 search
+let string17 ='Evolutech te capacita, en JavaScript, y React'
+console.log(string17.search('te')); //5
+console.log(string17.search(/evolutech/gi)); 
+
+//! 18 match
+let string18 ='Evolutech te capacita, en JavaScript, y React'
+console.log(string18.match('Evolutech'));
+console.log(string18.match(/Evolutech/gi));
+
+let string19 ='Evolutech te capacita, en JavaScript, y React'
+let txt='En 2023 me inscribí a un curso de JavaScript con React, espero que para el 2024 pueda ser senior usando estas tecnologias'
+console.log(txt.match(/\d/g));
+//! 19 repeat()
+let txt1 = 'Hello';
+console.log(txt1.repeat(10));
+//! COmprobación de tipos de datos y conversión
+// typeof: devuelve el tipo del valor especificado como un String (tipo primitivo)
+let first_name='Maria'
+let country='Bolivia'
+let phone=7777777
+console.log(typeof first_name);
+console.log(typeof country);
+console.log(typeof phone);
+//! Casting 
+
+//? parseInt, parseFloat,Number, +string,string()
+
+//? Cadena a un entero
+//? parseInt
+//? Number()
+//? signo (+)
+
+console.log(typeof numero);
+let numeroAentero1=parseInt(numero)
+console.log(numeroAentero1);
+console.log(typeof numeroAentero);
+let numeroAentero2=Number(numero)
+console.log(numeroAentero2);
+console.log(typeof numeroAentero2);
+let numero='10'
+let numeroAentero3=+numero
+console.log(numeroAentero3);
+console.log(typeof numeroAentero3);
 
 
 
