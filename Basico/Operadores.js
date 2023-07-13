@@ -95,8 +95,8 @@ let contador=0
 // contador=contador+1 //3
 // contador=contador+1 //4
 
-console.log(contador++);
-console.log(contador++);
+console.log(contador++); //1
+console.log(contador++); //2
 console.log(contador++);
 console.log(contador);
 // Post decremento
