@@ -66,6 +66,9 @@ function cudrado(n) {
 }
 console.log(cudrado(2));
 
+// const cuadrado1=(n,n)=> {
+//      let a=0 
+//      return n*n}
 const cuadrado1=n=> n*n
 console.log("Resultado:",cuadrado1(5));
 //!Función con parámetros por defecto

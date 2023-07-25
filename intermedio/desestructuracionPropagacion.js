@@ -129,8 +129,15 @@ numerosPares.push(12)
 console.log(pares);
 
 const pares=[0,2,4,6,8, 10]
+let paresA= pares
+console.log(paresA);
+paresA.push(12)
+console.log(paresA);
+console.log(pares);
+
 const numerosParesProp=[...pares]
 numerosParesProp.push(12)
+numerosParesProp.push(14)
 console.log(numerosParesProp);
 console.log(pares);
 
