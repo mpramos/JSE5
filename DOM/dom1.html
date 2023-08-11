@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .titulos{
+            background-color: black;
+            color:#fff ;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulos">Modelo de Objeto de documento0</h1>
+    <h1 class="titulos">Modelo de Objeto de documento1</h1>
+    <h1 id="titulo1">Modelo de Objeto de documento3</h1>
+
+    <h1></h1>
+    <h1></h1>
+    <img src="" alt="imagen">
+    <input type="number">
+    <button>enviar</button>
+    <script>
+        console.log('primer script');
+       let todosTitulos=document.getElementsByTagName('h1')
+       console.log(todosTitulos.length); 
+       for (let i = 0; i < todosTitulos.length; i++) {
+           console.log(todosTitulos[i]);
+           
+        }
+    let titulosId=document.getElementById('titulo1')
+    console.log('titulosId ',titulosId);
+
+    let titulosClase=document.getElementsByClassName('titulos')
+    console.log(titulosClase);
+    console.log('titulosClase');
+    for (let i = 0; i < titulosClase.length; i++) {
+        console.log(titulosClase[i].textContent);
+    }
+
+    let primerTitulo1= document.querySelectorAll('h1')
+    let primerTitulo2= document.querySelector('#titulo1')
+    let primerTitulo3= document.querySelectorAll('.titulos')
+    console.log( '-----------QUERY SELECTOR ------------');
+    // console.log(primerTitulo1.textContent);
+    console.log(primerTitulo2.textContent);
+    // console.log(primerTitulo3.textContent);
+    console.log(primerTitulo1);
+    // for (let i = 0; i < primerTitulo1.length; i++) {
+    //     console.log(primerTitulo1[i].textContent);
+        
+    // }
+    console.log(primerTitulo3);
+    for (let i = 0; i < primerTitulo3.length; i++) {
+        console.log(primerTitulo3[i].textContent);
+        
+    }
+    let titulos= document.querySelectorAll('h1')
+    console.log("----------------------------");
+    console.log(titulos);
+    titulos[3].setAttribute('class','titulos')
+    titulos[3].setAttribute('id','cuarto elemento')
+    titulos[4].classList.add('titulos','ultimo-titulo')
+    titulos[4].classList.remove('titulos','ultimo-titulo')
+    titulos[4].id='quinto elemento'
+    titulos[3].textContent='Objeto de documento 4'
+    titulos[4].textContent='Objeto de documento 5'
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const throwErrorFuncion=()=>{
+    let mensaje
+    let x= prompt('Ingrese un numero')
+    try {
+        if(x=='') throw 'vacio'
+        if(isNaN(x)) throw 'no es un numero'
+        x = Number(x)
+        if (x<5) throw 'el numero es muy bajo'
+        if (x>10) throw 'el numero es muy alto'
+    } catch (error) {
+        console.log(error);
+    } finally{
+        console.log(x);
+    }
+}
+throwErrorFuncion()
+    </script>
+    
+</body>
+</html>

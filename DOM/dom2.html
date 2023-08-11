@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1> Trabajando con innerHTML</h1>
+        <h2>Evolutech Cisco</h2>
+        <ul>
+        </ul>
+       
+    </div>
+    <script>
+        let list=`
+        <li> tarea 1 </li>
+        <li> tarea 2 </li>
+        <li> tarea 3 </li>
+        <li> tarea 4 </li>
+        `
+        let ul = document.querySelector('ul')
+        console.log(ul);
+        ul.innerHTML=list
+    </script>
+</body>
+</html>
