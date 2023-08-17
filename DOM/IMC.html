@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Calculadora de Indice de Masa Corporal</h1>
+    <input type="text" id="masa" placeholder="Masa en kilogramos">
+    <input type="text" id="altura" placeholder="Altura en metros">
+    <button> Calcular el IMC </button>
+    <script>
+        const masa=document.querySelector('#masa')
+        const altura=document.querySelector('#altura')
+        const button=document.querySelector('button')
+        
+        let imc
+        button.addEventListener('click',()=>{
+         imc= masa.value / altura.value ** 2
+         alert(`Tú indice de masa corporal es de ${imc.toFixed(3)}`)
+         console.log(imc);
+         
+        })
+     
+    </script>
+</body>
+</html>

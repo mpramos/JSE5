@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Oyentes de eventos</h1>
+    <!-- Oyentes de eventos  -->
+    <!-- onclick -->
+    <!-- onchange -->
+    <!-- onmouseover -->
+    <!-- onmouseout -->
+    <!-- onkeyup -->
+    <!-- onload -->
+    <button class="btn1"> Hazme click btn 1</button>
+    <button onclick="clickMe()"> Hazme click atributo onclick </button>
+    <button class="btn2"> btn doble click</button>
+    <button class="btn3"> btn mouse enter</button>
+</body>
+<script>
+    //sintaxis
+    //OPCION 1
+    // elementoSeleccionado.addEventListener('eventlistener',function(e){
+    // })
+    //OPCION 2*
+    // elementoSeleccionado.addEventListener('eventlistener',e=>{
+    // })
+    const clickMe=()=>{
+        alert('Me hiciste click !')
+    }
+    //click
+    const button=document.querySelector('.btn1')
+    button.addEventListener('click',e=>{
+        console.log('El e objeto: ', e);
+        console.log('El target de e ', e.target);
+        console.log('El content del target de e ', e.target.textContent);
+
+    })
+    //doble click
+    const btn2=document.querySelector('.btn2')
+    btn2.addEventListener('dblclick',e=>{
+        console.log('El e objeto: ', e);
+        console.log('El target de e ', e.target);
+        console.log('El content del target de e ', e.target.textContent);
+
+    })
+    // mouse enter
+    const btn3=document.querySelector('.btn3')
+    btn3.addEventListener('mouseenter',e=>{
+        console.log('El e objeto: ', e);
+        console.log('El target de e ', e.target);
+        console.log('El content del target de e ', e.target.textContent);
+
+    })
+
+
+
+</script>
+</html>
