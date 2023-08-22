@@ -38,7 +38,7 @@ let firstName='Maria'
 let fullName= firstName + ' ' + lastName
 console.log(fullName); 
 //? Error de sintaxis(SyntaxError) un error de sintaxis
-let cuadrado= 2x2
+// let cuadrado= 2x2
 // let cuadrado= 2*2
 console.log(`El valor del cuadrado es ${cuadrado}`); 
 //? TypeError, Se produce por un error de tipo
