@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Personajes de Rick and Morty</h1>
+    <label for="">Filtrar los personajes por estado</label>
+    <select name="" id="">
+        <option value="Alive">Vivo</option>
+        <option value="Dead">Muerto</option>
+        <option value="unknown">Desconocido</option>
+    </select>
+    <div id="container"></div>
+    <script>
+        const API = 'https://rickandmortyapi.com/api/character'
+        const select = document.querySelector('select');
+        let filterEvent = select.addEventListener('change', () => {
+            fetchFiltrarEstado(select.value)
+        })
+
+        let fetchFiltrarEstado = async (status) => {
+            try {
+                let respuesta = await fetch(`${API}/?status=${status}`)
+                let data = await respuesta.json()
+                verPersonajes(data)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        let container = document.getElementById('container')
+        let verPersonajes = async (data) => {
+            container.innerHTML=''
+            let personajes = data.results
+            personajes.map(personaje => {
+                let cardPersonaje = document.createElement("div")
+                cardPersonaje.innerHTML = `
+                  <h3> ${personaje.name}</h3>
+                  <p style='color:${personaje.status === 'Alive' ? 'green' : personaje.status === 'Dead' ? 'red' : 'blue'}'> ${personaje.status} </p>
+                  <img src=${personaje.image}> 
+                  `
+                container.appendChild(cardPersonaje);
+            }
+            )
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Personajes de Rick and Morty</h1>
+    <div id="personajes"></div>
+    <script>
+       let container= document.getElementById('personajes')
+        let api='https://rickandmortyapi.com/api/character'
+
+        let fetchData= async ()=>{
+            let respuesta = await fetch(api)
+            let data = await respuesta.json()
+            return data
+        }
+        let verPersonajes= async ()=>{
+            const data=await  fetchData()
+            let personajes= data.results
+            personajes.map(personaje=>
+                {
+                   let cardPersonaje = document.createElement('img')
+                   let namePersonaje = document.createElement('p')
+                   namePersonaje.textContent = personaje.name
+                   cardPersonaje.classList.add("card")
+                   cardPersonaje.setAttribute("src",personaje.image)
+                   container.appendChild(namePersonaje)
+                container.appendChild(cardPersonaje)
+
+                }
+            )
+        }
+        verPersonajes()
+       
+    </script>
+</body>
+</html>
